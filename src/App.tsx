@@ -1,9 +1,7 @@
 import { Route, Routes } from 'react-router';
-import { LoginPage } from './components/auth/login';
+import { AuthRootComponent } from './components/auth';
 import { Home } from './components/home';
 import { PrivateRoute } from './components/utils/router/privateRoute';
-import { RegisterPage } from './components/auth/register'
-
 
 export function App() {
 	return (
@@ -13,10 +11,8 @@ export function App() {
 					<Route path='/' element={<Home />} />
 				</Route>
 
-
-
-				<Route path='/login' element={<LoginPage />} />
-        <Route path='/register' element={<RegisterPage />} />
+				<Route path='/login' element={<AuthRootComponent />} />
+				<Route path='/register' element={<AuthRootComponent />} />
 			</Routes>
 		</div>
 	);
